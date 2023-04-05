@@ -41,7 +41,9 @@ body {
     max-width: 600px;
 }
 
-.product__image img {
+.product__image {
+    background-image: url(/images/image-product-desktop.jpg);
+    background-size: cover;
     border-radius: 20px 0 0 20px;
 }
 
@@ -49,6 +51,7 @@ body {
     padding: 2em;
     border-radius: 0 20px 20px 0;
     display: flex;
+    gap: 1em;
     flex-direction: column;
     justify-content: space-around;
     background-color: var(--white);
@@ -112,14 +115,17 @@ body {
 
     .product {
         grid-template-columns: 1fr;
+        width: 70%;
+        grid-template-rows: 1fr 1fr;
     }
 
     .product__content {
-        gap: 1em;
+        border-radius: 0 0 20px 20px;
     }
 
-    .product__image img {
+    .product__image {
         border-radius: 20px 20px 0 0;
+        background-image: url(/images/image-product-mobile.jpg);
     }
 
 }
