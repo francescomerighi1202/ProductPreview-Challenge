@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+
+    --p-fs: 14px;
+    --ff-montserrat: 'Montserrat', sans-serif;
+    --ff-fraunces: 'Fraunces', serif;
+
+    --fw-500: 500;
+    --fw-700: 700;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    background-color: var(--cream);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 600px;
+    border: 2px solid red;
+}
+
+.product__image img {
+    border-radius: 20px 0 0 20px;
+}
+
+.product__content {
+    padding: 2em;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: var(--white);
+}
+
+.product__type {
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    color: var(--dark-grayish-blue);
+    font-size: var(--p-fs);
+    font-family: var(--ff-montserrat);
+}
+
+.product__content h1 {
+    font-family: var(--ff-fraunces);
+    color: var(--very-dark-blue);
+    font-weight: var(--fw-700);
+}
+
+.product__desc {
+    font-family: var(--ff-montserrat);
+    font-size: var(--p-fs);
+    color: var(--dark-grayish-blue);
+}
+
+.product__price {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.canceled {
+    color: var(--dark-grayish-blue);
+}
+
+.clr--green {
+    color: var(--dark-cyan);
+    font-family: var(--ff-fraunces);
+    font-size: 2rem;
+}
+
+.purchase {
+    text-decoration: none;
+    padding: 1em;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    font-family: var(--ff-montserrat);
+    background-color: var(--dark-cyan);
+}
+
+.purchase:hover {
+    background-color: hsl(158, 36%, 20%);
+}
+
+.purchase img {
+    margin-right: 1em;
+}
+
+@media (max-width: 600px) {
+
+    .product {
+        grid-template-columns: 1fr;
+    }
+
+    .product__content {
+        gap: 1em;
+    }
+
+    .product__image img {
+        border-radius: 20px 20px 0 0;
+    }
+
+}
